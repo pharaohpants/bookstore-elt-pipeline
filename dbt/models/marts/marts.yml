@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests:
+          - not_null
+          - unique
+      - name: date_day
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_customer
+    columns:
+      - name: customer_sk
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: dim_book
+    columns:
+      - name: book_sk
+        tests:
+          - not_null
+          - unique
+      - name: book_id
+        tests:
+          - not_null
+
+  - name: fct_order_line
+    columns:
+      - name: order_line_sk
+        tests:
+          - not_null
+          - unique
+      - name: line_id
+        tests:
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_sk
+        tests:
+          - not_null
+      - name: book_sk
+        tests:
+          - not_null
+
+  - name: fct_daily_book_sales
+    columns:
+      - name: date_key
+        tests:
+          - not_null
+      - name: book_id
+        tests:
+          - not_null
+
+  - name: fct_customer_repeat_order
+    columns:
+      - name: customer_repeat_order_sk
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,33 @@
+name: pacbook_dwh
+version: 1.0.0
+config-version: 2
+
+profile: pacbook_dwh
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - target
+  - dbt_packages
+  - logs
+
+models:
+  pacbook_dwh:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
+
+snapshots:
+  pacbook_dwh:
+    +target_schema: "{{ env_var('SNOWFLAKE_SNAPSHOT_SCHEMA', 'SNAPSHOTS') }}"

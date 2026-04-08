@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_customer
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_book
+    columns:
+      - name: book_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_cust_order
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: stg_order_line
+    columns:
+      - name: line_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: book_id
+        tests:
+          - not_null
+
+  - name: stg_order_history
+    columns:
+      - name: history_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
