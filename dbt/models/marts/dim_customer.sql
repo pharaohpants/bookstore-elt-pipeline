@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_dim_customer primary key (customer_sk)"
+    ]
+) }}
+
 with src as (
     select
       customer_id,

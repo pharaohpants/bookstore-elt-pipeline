@@ -1,3 +1,10 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_fct_customer_repeat_order primary key (customer_repeat_order_sk)",
+      "alter table {{ this }} add constraint fk_fct_customer_repeat_order_customer foreign key (customer_sk) references {{ ref('dim_customer') }} (customer_sk)"
+    ]
+) }}
+
 with base as (
     select *
     from {{ ref('int_customer_repeat_order') }}

@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_dim_geography primary key (geography_sk)"
+    ]
+) }}
+
 select
   {{ dbt_utils.generate_surrogate_key(['cast(a.address_id as string)']) }} as geography_sk,
   a.address_id,

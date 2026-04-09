@@ -32,6 +32,27 @@ models:
         tests:
           - not_null
 
+  - name: dim_geography
+    columns:
+      - name: geography_sk
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_shipping_method
+    columns:
+      - name: shipping_method_sk
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_order_status
+    columns:
+      - name: order_status_sk
+        tests:
+          - not_null
+          - unique
+
   - name: fct_order_line
     columns:
       - name: order_line_sk
@@ -53,10 +74,14 @@ models:
 
   - name: fct_daily_book_sales
     columns:
+      - name: daily_book_sales_sk
+        tests:
+          - not_null
+          - unique
       - name: date_key
         tests:
           - not_null
-      - name: book_id
+      - name: book_sk
         tests:
           - not_null
 

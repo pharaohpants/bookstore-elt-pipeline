@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_dim_book primary key (book_sk)"
+    ]
+) }}
+
 with src as (
     select
       book_id,

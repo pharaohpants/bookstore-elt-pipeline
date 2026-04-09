@@ -1,3 +1,15 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_fct_order_line primary key (order_line_sk)",
+      "alter table {{ this }} add constraint fk_fct_order_line_date foreign key (date_key) references {{ ref('dim_date') }} (date_key)",
+      "alter table {{ this }} add constraint fk_fct_order_line_customer foreign key (customer_sk) references {{ ref('dim_customer') }} (customer_sk)",
+      "alter table {{ this }} add constraint fk_fct_order_line_book foreign key (book_sk) references {{ ref('dim_book') }} (book_sk)",
+      "alter table {{ this }} add constraint fk_fct_order_line_geography foreign key (geography_sk) references {{ ref('dim_geography') }} (geography_sk)",
+      "alter table {{ this }} add constraint fk_fct_order_line_ship_method foreign key (shipping_method_sk) references {{ ref('dim_shipping_method') }} (shipping_method_sk)",
+      "alter table {{ this }} add constraint fk_fct_order_line_status foreign key (order_status_sk) references {{ ref('dim_order_status') }} (order_status_sk)"
+    ]
+) }}
+
 with base as (
     select *
     from {{ ref('int_order_line_enriched') }}

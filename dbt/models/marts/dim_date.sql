@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+      "alter table {{ this }} add constraint pk_dim_date primary key (date_key)"
+    ]
+) }}
+
 with calendar as (
     select
       dateadd(day, seq4(), to_date('2000-01-01')) as date_day
