@@ -75,7 +75,8 @@ Book sales transactions at PacBook Store.
 
 ### Data Warehouse Diagram
 
-![ERD Diagram](assets/data_warehouse_erd.png)
+![ERD Diagram]<img width="970" height="801" alt="image" src="https://github.com/user-attachments/assets/24d966b7-5908-4a33-aafc-cd8f0d1df3c8" />
+
 
 ---
 
