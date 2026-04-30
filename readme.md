@@ -102,7 +102,7 @@ The pipeline follows an **ELT (Extract → Load → Transform)** pattern and run
 
 **Airflow DAG:**
 
-![Airflow DAG](assets/dag_graph.png)
+![Airflow DAG]<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/c632563c-2490-4da1-8122-0226672c6147" />
 
 **DAG steps:**
 1. `extract_source` — Extract tables from PostgreSQL source
@@ -188,7 +188,10 @@ Default credentials: `airflow` / `airflow`
 
 Enable and trigger the DAG named `pacbook_elt_pipeline`. You can monitor task progress in the Graph view.
 
-![DAG Running](assets/dag_running.png)
+![DAG Running]
+<img width="1901" height="969" alt="image" src="https://github.com/user-attachments/assets/74382183-f7eb-46f4-b6e3-21b00f5ac460" />
+<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/b7774a34-16da-4e26-8c38-b730715a4fc6" />
+
 
 ---
 
