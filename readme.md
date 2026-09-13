@@ -1,6 +1,6 @@
 ﻿# 📚 PacBook Store — End-to-End Data Engineering Pipeline
 
-![Pipeline Architecture](assets/architecture.png)
+![Uploading image.png…]()
 
 > An end-to-end ELT pipeline that separates operational workloads from analytical workloads using a modern data stack — enabling the business intelligence team to query insights in seconds without disrupting the live application.
 
