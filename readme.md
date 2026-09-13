@@ -1,6 +1,6 @@
-﻿# 📚 PacBook Store — End-to-End Data Engineering Pipeline
+<img width="4853" height="2498" alt="image" src="https://github.com/user-attachments/assets/b28bba15-dc6d-42d7-bc88-d0ac6588389b" />﻿# 📚 PacBook Store — End-to-End Data Engineering Pipeline
 
-![Uploading image.png…]()
+<img width="4853" height="2498" alt="image" src="https://github.com/user-attachments/assets/2a148375-1fa4-472e-b00b-b49c90247276" />
 
 > An end-to-end ELT pipeline that separates operational workloads from analytical workloads using a modern data stack — enabling the business intelligence team to query insights in seconds without disrupting the live application.
 
